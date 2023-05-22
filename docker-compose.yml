@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    env_file:
+      - .env
+    volumes:
+      - ./infrastructure/persistence/database/storage/dump:/docker-entrypoint-initdb.d
+    ports:
+      - "127.0.0.1:3307:3306"
+    networks:
+      - kundbild-network
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:lts
+    user: root
+    ports:
+      - "127.0.0.1:8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      JAVA_OPTS: "-Djenkins.install.runSetupWizard=true"
+      JENKINS_OPTS: "--prefix=/jenkins"
+      TZ: "Europe/Stockholm"
+    depends_on:
+      - mysql
+    networks:
+      - kundbild-network
+volumes:
+  jenkins_data:
+networks:
+  kundbild-network:
+    driver: bridge
