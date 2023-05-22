@@ -3,7 +3,7 @@
 1. Version 1.20+ - Go programspråk - https://go.dev/dl
 2. Docker/Docker Engine - För att mysql databas/jenkins containers genom docker-compose.yml ska kunna skapas - https://docs.docker.com/get-docker/ - https://docs.docker.com/engine/install/
 3. Node.js och npm - Senaste versionen - Krävs för att kunna uppdatera/köra React frontend som ligger i ./web/
-4. Valfritt databas program för att kunna connecta till mysql databasen, jag använder själv DBeaver Community - https://dbeaver.io/download/
+4. Valfritt databas program för att kunna connecta till mysql databasen och för att se vad finns sparat, jag använder själv DBeaver Community - https://dbeaver.io/download/
 5. Konfigurationsdetaljerna för att connecta till mysql databasen hittar ni under # Database Connection Details inuti .env filen som befinner sig i root av projektet.
 
 # Instruktioner för installation:
