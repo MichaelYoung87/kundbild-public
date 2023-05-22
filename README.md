@@ -8,8 +8,8 @@
 skapas - https://docs.docker.com/get-docker/ - https://docs.docker.com/engine/install/
 4. Node.js och npm - Senaste versionen - Krävs för att kunna uppdatera/köra React frontend som ligger i 
 ./web/
-5. Valfritt databasprogram för att kunna connecta till mysql databasen och för att se vad som finns sparat, 
-jag använder själv DBeaver Community - https://dbeaver.io/download/
+5. Valfritt databasprogram för att kunna connecta till mysql databasen och för att se vad som finns 
+sparat, jag använder själv DBeaver Community - https://dbeaver.io/download/
 6. Konfigurationsdetaljerna för att connecta till mysql databasen hittar ni under 
 # Database Connection Details inuti .env filen som befinner sig i root av projektet.
 ```
